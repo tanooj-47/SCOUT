@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCOUT — Geospatial Intelligence & Spatial Risk Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="badge">SCOUT</span>
+        <h1>Geospatial Intelligence & Spatial Risk Engine</h1>
+      </div>
+      <div id="engine-status-pill" class="status-pill status-checking">Checking Subsystems...</div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Top Row: Input & Coordinate Validation -->
+    <section class="card control-card">
+      <h2>1. Incident Location & Parameters</h2>
+      <p class="subtitle">Enter WGS 84 geographic coordinates and configure analysis radius.</p>
+      
+      <form id="geospatial-form">
+        <div class="grid-form">
+          <div class="form-group">
+            <label for="latitude">Latitude (WGS 84, °N)</label>
+            <input type="number" id="latitude" step="0.000001" min="-90" max="90" value="37.7749" required>
+            <span class="hint">Valid: [-90.0, 90.0]</span>
+          </div>
+
+          <div class="form-group">
+            <label for="longitude">Longitude (WGS 84, °E)</label>
+            <input type="number" id="longitude" step="0.000001" min="-180" max="180" value="-122.4194" required>
+            <span class="hint">Valid: [-180.0, 180.0]</span>
+          </div>
+
+          <div class="form-group">
+            <label for="radius">Search Radius (Meters)</label>
+            <input type="number" id="radius" step="100" min="100" max="100000" value="5000" required>
+            <span class="hint">Range: [100m, 100km]</span>
+          </div>
+
+          <div class="form-group">
+            <label for="disaster-type">Disaster Domain</label>
+            <select id="disaster-type">
+              <option value="wildfire" selected>Wildfire (Vegetation & Fuel Adjacency)</option>
+              <option value="flood">Flood (Hydrology & Lowlands)</option>
+              <option value="earthquake">Earthquake (Epicenter & Infrastructure)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="btn-validate" class="btn btn-secondary">Validate Coordinate</button>
+          <button type="submit" id="btn-analyze" class="btn btn-primary">Run Spatial Exposure Analysis</button>
+        </div>
+      </form>
+
+      <!-- Live Coordinate Validation Card -->
+      <div id="validation-card" class="validation-box hidden">
+        <div class="val-header">
+          <span class="val-title">Coordinate Validation Result:</span>
+          <span id="val-badge" class="badge">Valid</span>
+        </div>
+        <div class="val-details">
+          <div><strong>SRID:</strong> <span id="val-srid">EPSG:4326</span></div>
+          <div><strong>Resolved UTM Zone:</strong> <span id="val-utm">EPSG:32610</span></div>
+          <div id="val-error-row" class="error-text hidden"><strong>Error:</strong> <span id="val-error-msg"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results-section" class="results-layout hidden">
+      <!-- Left Column: Exposure Metrics & Explanations -->
+      <div class="column-left">
+        <!-- Exposure Summary Card -->
+        <div class="card summary-card">
+          <h2>2. Geographic Exposure Summary</h2>
+          <div class="metric-grid">
+            <div class="metric-box">
+              <span class="metric-label">Features Found</span>
+              <span id="metric-total-features" class="metric-value">0</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Closest Feature</span>
+              <span id="metric-closest-dist" class="metric-value">N/A</span>
+              <span id="metric-closest-name" class="metric-sub">None</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Data Provider</span>
+              <span id="metric-provider" class="metric-value">Vector Catalog</span>
+            </div>
+          </div>
+
+          <h3>Category Breakdown</h3>
+          <div id="category-chips" class="chip-container">
+            <!-- Dynamic Category Chips -->
+          </div>
+        </div>
+
+        <!-- Contributing Factors & Transparent Assessment -->
+        <div class="card factors-card">
+          <h2>3. Contributing Factors (Explainable Evidence)</h2>
+          <ul id="contributing-factors-list" class="styled-list">
+            <!-- Dynamic Factors -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column: Nearby Features & Scientific Limitations -->
+      <div class="column-right">
+        <!-- Nearby Features Table -->
+        <div class="card table-card">
+          <h2>4. Nearby Geographic Entities</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Feature Name</th>
+                  <th>Category</th>
+                  <th>Distance</th>
+                  <th>Relationship</th>
+                  <th>Source</th>
+                </tr>
+              </thead>
+              <tbody id="features-table-body">
+                <!-- Dynamic Rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Data Transparency & Limitations -->
+        <div class="card warning-card">
+          <h2>5. Scientific Governance & Limitations</h2>
+          <div class="warning-section">
+            <div class="warning-title">Missing Geographic Layers:</div>
+            <ul id="missing-layers-list" class="warning-list">
+              <!-- Dynamic Missing Layers -->
+            </ul>
+          </div>
+          <div class="warning-section">
+            <div class="warning-title">Operational Boundary Assumptions:</div>
+            <ul id="limitations-list" class="caution-list">
+              <!-- Dynamic Limitations -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>SCOUT Multimodal Disaster Intelligence Platform &mdash; Milestone 08 Geospatial Intelligence Engine</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

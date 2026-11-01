@@ -1,0 +1,41 @@
+{
+  "dataset_id": "isro_bhuvan_flood_hazard_wms",
+  "dataset_name": "ISRO Bhuvan Disaster Services \u2014 Flood Hazard & Inundation Layers",
+  "provider": "isro_bhuvan",
+  "official_source_url": "https://bhuvan.nrsc.gov.in/",
+  "download_url": "https://bhuvan-vec2.nrsc.gov.in/bhuvan/wms",
+  "product_name": "bhuvan_hazard_wms",
+  "product_version": "operational_wms_1.1.1",
+  "acquisition_state": "source_discovered",
+  "acquisition_timestamp_utc": "2026-10-31T11:48:47.596376+00:00",
+  "source_publication_date": null,
+  "reference_period": null,
+  "geographic_coverage": "India-wide (Major river basins: Brahmaputra, Ganga, Mahanadi, Godavari, Kosi)",
+  "license": "Government of India / NRSC ISRO Terms of Service",
+  "attribution": "ISRO / National Remote Sensing Centre (NRSC), Government of India",
+  "original_filename": "bhuvan_flood_hazard_capabilities.xml",
+  "file_format": "wms_ogc_service",
+  "file_size_bytes": 1048576,
+  "sha256": null,
+  "md5": null,
+  "crs": "EPSG:4326",
+  "spatial_resolution": "1:50000 thematic / raster WMS stream",
+  "temporal_resolution": null,
+  "coordinate_bounds": [
+    68.1,
+    6.5,
+    97.4,
+    35.5
+  ],
+  "nodata_value": null,
+  "processing_status": "raw",
+  "validation_status": "unvalidated",
+  "quality_notes": [
+    "Historical flood inundation zones derived from multi-temporal satellite sensors (RISAT, Sentinel-1, IRS).",
+    "Subject to optical cloud cover gaps during active monsoonal storm events."
+  ],
+  "operational_use_restrictions": "Service provides OGC WMS map imagery streams for situational awareness. Raw spatial geometry download is restricted to authorized government agencies.",
+  "metadata_payload": {
+    "credentials_required": false
+  }
+}

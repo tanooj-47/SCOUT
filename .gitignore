@@ -79,3 +79,15 @@ ml/models/*
 *.pt
 *.pth
 *.onnx
+
+# Media and Local File Storage
+storage/
+
+# ML Artifacts, Checkpoints and Scratch
+artifacts/
+scratch/
+
+# Node.js and Frontend dependencies & builds
+node_modules/
+frontend/dist/
+.vite/

@@ -1,0 +1,41 @@
+{
+  "dataset_id": "soi_abdb_national",
+  "dataset_name": "Survey of India Administrative Boundary Data Base (ABDB)",
+  "provider": "survey_of_india",
+  "official_source_url": "https://surveyofindia.gov.in/pages/administrative-boundary-data-base-abdb-",
+  "download_url": "https://onlinemaps.surveyofindia.gov.in/",
+  "product_name": "abdb_national",
+  "product_version": "2024",
+  "acquisition_state": "source_discovered",
+  "acquisition_timestamp_utc": "2026-10-31T11:48:47.589940+00:00",
+  "source_publication_date": null,
+  "reference_period": null,
+  "geographic_coverage": "India-wide (State, District, Subdistrict, Village)",
+  "license": "National Geospatial Policy / Survey of India Terms",
+  "attribution": "Survey of India, Department of Science and Technology, Government of India",
+  "original_filename": "soi_abdb_boundaries.zip",
+  "file_format": "shapefile",
+  "file_size_bytes": 367001600,
+  "sha256": null,
+  "md5": null,
+  "crs": "EPSG:4326",
+  "spatial_resolution": "vector_1:50000",
+  "temporal_resolution": null,
+  "coordinate_bounds": [
+    68.1,
+    6.5,
+    97.4,
+    35.5
+  ],
+  "nodata_value": null,
+  "processing_status": "restricted",
+  "validation_status": "unvalidated",
+  "quality_notes": [
+    "Official sovereign boundaries of the Government of India.",
+    "Automated public downloading is gated by government authentication. User must obtain files via official portal."
+  ],
+  "operational_use_restrictions": "Requires user registration on onlinemaps.surveyofindia.gov.in with mobile OTP and identity verification. Export or transfer of sensitive boundary geometries outside India is restricted under national security policies.",
+  "metadata_payload": {
+    "credentials_required": true
+  }
+}

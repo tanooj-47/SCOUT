@@ -1,0 +1,44 @@
+{
+  "dataset_id": "copernicus_dem_glo30_india",
+  "dataset_name": "Copernicus DEM 30m Global Digital Surface Model (GLO-30)",
+  "provider": "copernicus_dem",
+  "official_source_url": "https://dataspace.copernicus.eu/",
+  "download_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N24_00_E078_00_DEM/Copernicus_DSM_COG_10_N24_00_E078_00_DEM.tif",
+  "product_name": "copernicus_glo_30",
+  "product_version": "GLO-30",
+  "acquisition_state": "acquired",
+  "acquisition_timestamp_utc": "2026-10-31T11:58:34+00:00",
+  "source_publication_date": "2021-11-30",
+  "reference_period": "2015-2020",
+  "geographic_coverage": "India Central Plateau calibration tile N24E078 (representative national grid)",
+  "license": "Open Access (Copernicus Data Policy)",
+  "attribution": "© DLR e.V. and © Airbus Defence and Space GmbH (Copernicus DEM)",
+  "original_filename": "Copernicus_DSM_COG_10_N24_00_E078_00_DEM.tif",
+  "file_format": "geotiff",
+  "file_size_bytes": 40113042,
+  "sha256": "783b23272fcd220cbf8ab1936b6b9b28011534f681179ea7d67c79360d0e687c",
+  "md5": "d828b1cb0cad85d6dfdfcd2726146da4",
+  "crs": "EPSG:4326 (EGM96 vertical datum)",
+  "spatial_resolution": "30m",
+  "temporal_resolution": "static",
+  "coordinate_bounds": [
+    78.0,
+    24.0,
+    79.0,
+    25.0
+  ],
+  "nodata_value": -99999.0,
+  "processing_status": "raw",
+  "validation_status": "validated",
+  "quality_notes": [
+    "Represents a Digital Surface Model (DSM) including canopy and structural elevations, not bare-earth DTM.",
+    "Derived slopes and hydrological drainage models must document surface model characteristics."
+  ],
+  "operational_use_restrictions": "Open use under Copernicus Data Policy.",
+  "metadata_payload": {
+    "credentials_required": false,
+    "cloud_optimized": true,
+    "dimensions": [3600, 3600],
+    "bands": 1
+  }
+}

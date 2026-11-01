@@ -1,0 +1,41 @@
+{
+  "dataset_id": "ghsl_pop_r2023a_india",
+  "dataset_name": "GHSL Global Human Settlement Population Grid (GHS-POP R2023A)",
+  "provider": "ghsl",
+  "official_source_url": "https://human-settlement.emergency.copernicus.eu/",
+  "download_url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2025_GLOBE_R2023A_54009_1000/V1-0/GHS_POP_E2025_GLOBE_R2023A_54009_1000_V1_0.zip",
+  "product_name": "ghs_pop_r2023a",
+  "product_version": "R2023A_epoch2025",
+  "acquisition_state": "source_discovered",
+  "acquisition_timestamp_utc": "2026-10-31T11:48:47.593451+00:00",
+  "source_publication_date": null,
+  "reference_period": null,
+  "geographic_coverage": "India-wide (national coverage)",
+  "license": "CC-BY-4.0",
+  "attribution": "European Commission, Joint Research Centre (JRC) Global Human Settlement Layer",
+  "original_filename": "GHS_POP_E2025_GLOBE_R2023A_54009_1000_V1_0.zip",
+  "file_format": "geotiff",
+  "file_size_bytes": 838860800,
+  "sha256": null,
+  "md5": null,
+  "crs": "EPSG:54009 / EPSG:4326",
+  "spatial_resolution": "1000m (100m regional sub-tiles)",
+  "temporal_resolution": null,
+  "coordinate_bounds": [
+    68.1,
+    6.5,
+    97.4,
+    35.5
+  ],
+  "nodata_value": -200,
+  "processing_status": "raw",
+  "validation_status": "unvalidated",
+  "quality_notes": [
+    "Estimates residential resident population density per grid cell for disaster exposure assessment.",
+    "Not an instantaneous headcount of individuals present during a disaster event."
+  ],
+  "operational_use_restrictions": "Open commercial and academic use with CC BY 4.0 credit.",
+  "metadata_payload": {
+    "credentials_required": false
+  }
+}

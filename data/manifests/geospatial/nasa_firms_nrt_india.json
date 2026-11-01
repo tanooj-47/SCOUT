@@ -1,0 +1,45 @@
+{
+  "dataset_id": "nasa_firms_nrt_india",
+  "dataset_name": "NASA FIRMS Satellite Active Fire Observations (Suomi-NPP VIIRS C2 NRT)",
+  "provider": "nasa_firms",
+  "official_source_url": "https://firms.modaps.eosdis.nasa.gov/",
+  "download_url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/suomi-npp-viirs-c2/csv/SUOMI_VIIRS_C2_South_Asia_7d.csv",
+  "product_name": "firms_viirs_c2_nrt",
+  "product_version": "2.0NRT",
+  "acquisition_state": "acquired",
+  "acquisition_timestamp_utc": "2026-10-31T12:29:14+00:00",
+  "source_publication_date": "2026-10-31",
+  "reference_period": "2026-10-24 to 2026-10-31",
+  "geographic_coverage": "India and South Asia (filtered: 9,308 Indian thermal detections)",
+  "license": "NASA Earth Science Data Policy (Open Access / Public Domain)",
+  "attribution": "NASA FIRMS, Earth Science Data and Information System (ESDIS) / LANCE",
+  "original_filename": "SUOMI_VIIRS_C2_South_Asia_7d.csv",
+  "file_format": "csv",
+  "file_size_bytes": 915533,
+  "sha256": "c26748bd5b2b7d7e6061e9c141bdca3f9d9c2eb2ed45f1ad8fe7c345a86e602a",
+  "md5": "c022d59bfbdff99074ace1178c2075cb",
+  "crs": "EPSG:4326",
+  "spatial_resolution": "375m (VIIRS I-band)",
+  "temporal_resolution": "daily satellite passes",
+  "coordinate_bounds": [
+    68.1,
+    6.5,
+    97.4,
+    35.5
+  ],
+  "nodata_value": null,
+  "processing_status": "raw",
+  "validation_status": "validated",
+  "quality_notes": [
+    "Near real-time 375m thermal anomaly detections with Fire Radiative Power (FRP in MW).",
+    "Open access 7-day rolling archive acquired without API key barrier; API endpoint area queries require NASA_FIRMS_MAP_KEY."
+  ],
+  "operational_use_restrictions": "Public domain; attribution to NASA FIRMS required.",
+  "metadata_payload": {
+    "credentials_required": false,
+    "api_map_key_required_for_custom_queries": true,
+    "total_south_asia_records": 11320,
+    "filtered_india_records": 9308,
+    "sensor": "VIIRS (Suomi-NPP)"
+  }
+}

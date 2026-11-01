@@ -1,0 +1,26 @@
+services:
+  scout-db:
+    image: postgis/postgis:16-3.4
+    container_name: scout-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER environment variable must be set}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD environment variable must be set}
+      POSTGRES_DB: ${POSTGRES_DB:?POSTGRES_DB environment variable must be set}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      # Expose PostgreSQL strictly to loopback to prevent external network access
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - scout_db_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  scout_db_data:
+    name: scout_postgis_data

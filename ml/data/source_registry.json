@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-31T04:15:00Z",
+  "description": "Registry of vetted wildfire, fire, smoke, and neutral computer vision datasets for SCOUT Milestone 07 Phase 7B expansion.",
+  "sources": {
+    "dfire": {
+      "source_id": "dfire",
+      "name": "D-Fire: An Image Dataset for Fire and Smoke Detection",
+      "curators": [
+        "Pedro Vinícius Almeida Borges de Venâncio",
+        "Adriano Chaves Lisboa",
+        "GAIA Solutions on Demand"
+      ],
+      "institution": "GAIA Solutions on Demand / Universidade Federal de Minas Gerais (UFMG)",
+      "release_year": 2022,
+      "license": {
+        "name": "CC0 1.0 Universal Public Domain",
+        "type": "permissive_open",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "spdx_id": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "canonical_url": "https://github.com/gaia-solutions-on-demand/DFireDataset",
+      "citation": "Borges de Venâncio, P. V. A., & Lisboa, A. C. (2022). D-Fire: An image dataset for fire and smoke detection. Gaia Solutions on Demand.",
+      "modalities": [
+        "RGB ground surveillance camera",
+        "RGB web/field camera",
+        "aggregated public sensor frames"
+      ],
+      "native_classes": [
+        "Fire",
+        "Smoke",
+        "None"
+      ],
+      "mapping_to_scout": {
+        "Fire": "fire",
+        "Smoke": "smoke",
+        "None": "neutral"
+      },
+      "total_samples": 21517,
+      "resolution_range": {
+        "min_width": 300,
+        "max_width": 1920,
+        "min_height": 225,
+        "max_height": 1080
+      },
+      "primary_formats": [
+        "JPEG"
+      ],
+      "access_method": "direct_download / onedrive / kaggle mirror",
+      "risk_assessment": {
+        "license_risk": "low",
+        "leakage_risk": "medium",
+        "leakage_notes": "Surveillance videos contain temporal frame sequences; must enforce strict scene-grouping before split generation.",
+        "label_noise_risk": "low",
+        "format_bias_risk": "low"
+      },
+      "vetting_status": "VETTED_APPROVED"
+    },
+    "bowfire": {
+      "source_id": "bowfire",
+      "name": "BoWFire Dataset: Fire and Non-Fire Still Image Benchmark",
+      "curators": [
+        "Daniel T. de Almeida Chino",
+        "Lucas P. S. Avalhais",
+        "José F. Rodrigues Jr.",
+        "Agma J. M. Traina"
+      ],
+      "institution": "GBDI - ICMC - University of São Paulo (USP), Brazil",
+      "release_year": 2015,
+      "license": {
+        "name": "Academic Research & Non-Commercial License (Flickr Attribution Required)",
+        "type": "research_only",
+        "commercial_use_allowed": false,
+        "attribution_required": true,
+        "spdx_id": "Custom-Academic",
+        "license_url": "https://bitbucket.org/gbdi/bowfire-dataset",
+        "redistribution_allowed": false,
+        "redistribution_notes": "BoWFireDataset README.txt explicitly restricts public redistribution of raw images without individual Flickr permissions. Raw image binaries are strictly for internal project research and evaluation; public releases must fetch images via automated download scripts."
+      },
+      "canonical_url": "https://bitbucket.org/gbdi/bowfire-dataset",
+      "citation": "Chino, D. Y., Avalhais, L. P., Rodrigues, J. F., & Traina, A. J. (2015). BoWFire: Detection of Fire in Still Images by Integrating Pixel Color and Texture Analysis. SIBGRAPI 2015.",
+      "modalities": [
+        "RGB still photography",
+        "urban and wildland emergency scenes",
+        "adversarial/distractor non-fire scenes (sunsets, autumn leaves, red vehicles)"
+      ],
+      "native_classes": [
+        "fire",
+        "no-fire"
+      ],
+      "mapping_to_scout": {
+        "fire": "fire",
+        "no-fire": "neutral"
+      },
+      "total_samples": 226,
+      "resolution_range": {
+        "min_width": 320,
+        "max_width": 1920,
+        "min_height": 240,
+        "max_height": 1280
+      },
+      "primary_formats": [
+        "PNG",
+        "JPEG"
+      ],
+      "access_method": "direct_http_zip",
+      "download_url": "https://api.bitbucket.org/2.0/repositories/gbdi/bowfire-dataset/downloads/BoWFireDataset.zip",
+      "risk_assessment": {
+        "license_risk": "low",
+        "leakage_risk": "low",
+        "leakage_notes": "Diverse standalone still images; low temporal autocorrelation.",
+        "label_noise_risk": "very_low",
+        "format_bias_risk": "low",
+        "format_bias_notes": "Contains non-fire JPEG and PNG images; excellent for breaking format confounding."
+      },
+      "vetting_status": "VETTED_APPROVED"
+    },
+    "fasdd": {
+      "source_id": "fasdd",
+      "name": "FASDD: An Open-Access 100,000-Level Flame and Smoke Detection Dataset",
+      "curators": [
+        "Ming Wang",
+        "Peng Yue",
+        "Liangcun Jiang",
+        "Dayu Yu",
+        "Tianyu Tuo",
+        "Jian Li"
+      ],
+      "institution": "School of Remote Sensing and Information Engineering, Wuhan University",
+      "release_year": 2024,
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "type": "permissive_open",
+        "commercial_use_allowed": true,
+        "attribution_required": true,
+        "spdx_id": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "canonical_url": "https://github.com/openrsgis/FASDD",
+      "citation": "Wang, M., Yue, P., Jiang, L., Yu, D., Tuo, T., & Li, J. (2025). An open flame and smoke detection dataset for deep learning in remote sensing based fire detection. Geo-spatial Information Science, 28(2), 511-526. DOI: 10.1080/10095020.2024.2347922",
+      "modalities": [
+        "RGB ground surveillance (CV)",
+        "RGB UAV / drone aerial captures",
+        "Remote Sensing (RS) satellite imagery"
+      ],
+      "native_classes": [
+        "flame",
+        "smoke",
+        "background"
+      ],
+      "mapping_to_scout": {
+        "flame": "fire",
+        "smoke": "smoke",
+        "background": "neutral"
+      },
+      "total_samples": 105670,
+      "resolution_range": {
+        "min_width": 512,
+        "max_width": 3840,
+        "min_height": 512,
+        "max_height": 2160
+      },
+      "primary_formats": [
+        "JPEG",
+        "PNG"
+      ],
+      "access_method": "sciencedb / huggingface / github mirror",
+      "risk_assessment": {
+        "license_risk": "low",
+        "leakage_risk": "high",
+        "leakage_notes": "UAV and CV video captures contain densely sampled consecutive frames. Video sequence ID tracking is strictly required.",
+        "label_noise_risk": "low",
+        "format_bias_risk": "low"
+      },
+      "vetting_status": "VETTED_APPROVED"
+    },
+    "flame": {
+      "source_id": "flame",
+      "name": "FLAME: Fire Detection and Modeling Aerial Multi-Spectral Dataset",
+      "curators": [
+        "Ali Mostafapour",
+        "Xiwen Chen",
+        "Abolfazl Razi"
+      ],
+      "institution": "AI-SENDS Lab, Clemson University / Northern Arizona University",
+      "release_year": 2021,
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "type": "research_only",
+        "commercial_use_allowed": false,
+        "attribution_required": true,
+        "spdx_id": "CC-BY-NC-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "canonical_url": "https://ieee-dataport.org/open-access/flame-dataset-aerial-imagery-pile-burn-detection-using-drones-uavs",
+      "citation": "Mostafapour, A., Chen, X., & Razi, A. (2021). FLAME: Fire Detection and Modeling: Aerial Multi-Spectral Image Dataset. IEEE DataPort. DOI: 10.1109/ACCESS.2021.3134674",
+      "modalities": [
+        "RGB UAV aerial drone cameras",
+        "Thermal IR radiometric imagery"
+      ],
+      "native_classes": [
+        "Fire",
+        "No-Fire"
+      ],
+      "mapping_to_scout": {
+        "Fire": "fire",
+        "No-Fire": "neutral"
+      },
+      "total_samples": 39375,
+      "resolution_range": {
+        "min_width": 640,
+        "max_width": 3840,
+        "min_height": 512,
+        "max_height": 2160
+      },
+      "primary_formats": [
+        "JPEG",
+        "TIFF"
+      ],
+      "access_method": "ieee_dataport / direct_archive",
+      "risk_assessment": {
+        "license_risk": "low",
+        "leakage_risk": "high",
+        "leakage_notes": "Continuous UAV flight videos over prescribed burns. Frames within same flight session must remain clustered.",
+        "label_noise_risk": "low",
+        "format_bias_risk": "low"
+      },
+      "vetting_status": "VETTED_APPROVED"
+    },
+    "figlib": {
+      "source_id": "figlib",
+      "name": "HPWREN FIgLib: Fire Ignition Library",
+      "curators": [
+        "Hans-Werner Braun",
+        "Frank Vernon",
+        "HPWREN Team"
+      ],
+      "institution": "San Diego Supercomputer Center / UC San Diego",
+      "release_year": 2016,
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "type": "research_only",
+        "commercial_use_allowed": false,
+        "attribution_required": true,
+        "spdx_id": "CC-BY-NC-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "canonical_url": "http://hpwren.ucsd.edu/HPWREN-FIgLib/",
+      "citation": "Braun, H. W., & Vernon, F. (2016). High Performance Wireless Research and Education Network (HPWREN) Fire Ignition Library. UC San Diego. DOI: 10.26022/IEDA/330043",
+      "modalities": [
+        "Mountaintop PTZ fixed optical surveillance cameras (Southern California)"
+      ],
+      "native_classes": [
+        "Pre-ignition background",
+        "Early smoke plume",
+        "Visible wildfire flame"
+      ],
+      "mapping_to_scout": {
+        "Visible wildfire flame": "fire",
+        "Early smoke plume": "smoke",
+        "Pre-ignition background": "neutral"
+      },
+      "total_samples": 24000,
+      "resolution_range": {
+        "min_width": 1536,
+        "max_width": 3072,
+        "min_height": 1024,
+        "max_height": 2048
+      },
+      "primary_formats": [
+        "JPEG"
+      ],
+      "access_method": "http_archive / wifire_catalog",
+      "risk_assessment": {
+        "license_risk": "low",
+        "leakage_risk": "high",
+        "leakage_notes": "Time-lapse intervals (typically 1 frame per minute) from fixed camera coordinates. High temporal and spatial background autocorrelation.",
+        "label_noise_risk": "low",
+        "format_bias_risk": "low"
+      },
+      "vetting_status": "VETTED_APPROVED"
+    },
+    "deepquest_v1": {
+      "source_id": "deepquest_v1",
+      "name": "DeepQuestAI Fire-Smoke Dataset (SCOUT v1 Reused Historical Cohort)",
+      "cohort_status": "REUSED_HISTORICAL_COHORT",
+      "cohort_notes": "The 2,931 images marked deepquest_v1 in fire_smoke_v2 are directly reused from historical fire_smoke_v1 (100% bitwise SHA-256 parity). They were not independently re-downloaded from the external web repository.",
+      "curators": [
+        "Moses Olafenwa",
+        "DeepQuestAI Team"
+      ],
+      "institution": "DeepQuest AI",
+      "release_year": 2019,
+      "license": {
+        "name": "MIT License / Permissive Research",
+        "type": "permissive_open",
+        "commercial_use_allowed": true,
+        "attribution_required": true,
+        "spdx_id": "MIT",
+        "license_url": "https://github.com/DeepQuestAI/Fire-Smoke-Dataset"
+      },
+      "canonical_url": "https://github.com/DeepQuestAI/Fire-Smoke-Dataset",
+      "citation": "Olafenwa, M. (2019). Fire-Smoke-Dataset: A dataset of images for fire and smoke classification. DeepQuest AI.",
+      "modalities": [
+        "RGB web scraped images",
+        "still photography",
+        "surveillance grabs"
+      ],
+      "native_classes": [
+        "Fire",
+        "Smoke",
+        "Neutral"
+      ],
+      "mapping_to_scout": {
+        "Fire": "fire",
+        "Smoke": "smoke",
+        "Neutral": "neutral"
+      },
+      "total_samples": 2931,
+      "resolution_range": {
+        "min_width": 180,
+        "max_width": 800,
+        "min_height": 135,
+        "max_height": 600
+      },
+      "primary_formats": [
+        "JPEG",
+        "TIFF",
+        "PNG"
+      ],
+      "access_method": "local_existing (data/processed/fire_smoke_v1/)",
+      "risk_assessment": {
+        "license_risk": "low",
+        "leakage_risk": "low",
+        "leakage_notes": "Existing split in v1 contains near-duplicate web images, resolved via dHash scene grouping.",
+        "label_noise_risk": "low",
+        "format_bias_risk": "high",
+        "format_bias_notes": "In v1, 100% of test neutral images were 800x600 PackBits TIFFs while fire/smoke were JPEGs. In v2, format balancing reduces Cramér's V from 1.0 to 0.244 in test, but residual confounding persists.",
+        "residual_confounding_notes": "100% of smoke images remain JPEG (1,144/1,144); 100% of TIFF images remain exclusive to neutral (156/156); PNG is present in fire (120) and neutral (109) but 0 in smoke. Split is group-independent (0 leaked scene groups), not source-independent."
+      },
+      "vetting_status": "VETTED_APPROVED_WITH_CAVEATS"
+    },
+    "fismo": {
+      "source_id": "fismo",
+      "name": "FiSmo: Emergency Situation Dataset for Fire and Smoke",
+      "curators": [
+        "ICMC-USP Research Group"
+      ],
+      "institution": "University of São Paulo, Brazil",
+      "release_year": 2018,
+      "license": {
+        "name": "Academic Research Use License",
+        "type": "research_only",
+        "commercial_use_allowed": false,
+        "attribution_required": true,
+        "spdx_id": "Custom-Academic",
+        "license_url": "https://bitbucket.org/gbdi/fismo-dataset"
+      },
+      "canonical_url": "https://bitbucket.org/gbdi/fismo-dataset",
+      "citation": "Avalhais, L. P., Chino, D. Y., Traina, A. J. (2018). FiSmo: A compilation of fire and smoke images for emergency analysis. ICMC-USP.",
+      "modalities": [
+        "RGB emergency photography",
+        "wildfire and structural fire",
+        "smoke plumes",
+        "negative normal environments"
+      ],
+      "native_classes": [
+        "fire",
+        "smoke",
+        "normal"
+      ],
+      "mapping_to_scout": {
+        "fire": "fire",
+        "smoke": "smoke",
+        "normal": "neutral"
+      },
+      "total_samples": 5573,
+      "resolution_range": {
+        "min_width": 300,
+        "max_width": 2048,
+        "min_height": 200,
+        "max_height": 1536
+      },
+      "primary_formats": [
+        "JPEG",
+        "PNG"
+      ],
+      "access_method": "bitbucket_archive",
+      "risk_assessment": {
+        "license_risk": "low",
+        "leakage_risk": "low",
+        "leakage_notes": "Standalone emergency photos; low frame-to-frame leakage.",
+        "label_noise_risk": "low",
+        "format_bias_risk": "low"
+      },
+      "vetting_status": "VETTED_APPROVED"
+    }
+  }
+}

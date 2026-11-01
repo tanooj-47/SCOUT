@@ -1,0 +1,44 @@
+{
+  "dataset_id": "esa_worldcover_2021_india",
+  "dataset_name": "ESA WorldCover 10m 2021 v200 Land Cover Grid",
+  "provider": "esa_worldcover",
+  "official_source_url": "https://esa-worldcover.org/en/data-access",
+  "download_url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N24E078_Map.tif",
+  "product_name": "worldcover_10m_v200",
+  "product_version": "2021_v200",
+  "acquisition_state": "acquired",
+  "acquisition_timestamp_utc": "2026-10-31T12:04:19+00:00",
+  "source_publication_date": "2022-10-28",
+  "reference_period": "2021",
+  "geographic_coverage": "India Central Plateau calibration tile N24E078 (representative national grid)",
+  "license": "CC-BY-4.0",
+  "attribution": "© ESA WorldCover project 2021 / contains modified Copernicus Sentinel data",
+  "original_filename": "ESA_WorldCover_10m_2021_v200_N24E078_Map.tif",
+  "file_format": "geotiff",
+  "file_size_bytes": 101801980,
+  "sha256": "24b1634023daf56fca5c373a4f1ef53d4726e6ba45f1d823b9f6373d043deede",
+  "md5": "0a04e37b2f9ba06f39438da5d381a720",
+  "crs": "EPSG:4326",
+  "spatial_resolution": "10m",
+  "temporal_resolution": "annual",
+  "coordinate_bounds": [
+    78.0,
+    21.0,
+    81.0,
+    24.0
+  ],
+  "nodata_value": 0,
+  "processing_status": "raw",
+  "validation_status": "validated",
+  "quality_notes": [
+    "11 discrete land-cover classes (tree cover, shrubland, grassland, built-up, water bodies, mangroves).",
+    "To respect storage budgets (<10 GB), national tile index is cataloged with prioritized hazard tile fetching."
+  ],
+  "operational_use_restrictions": "Open commercial and non-commercial use with credit to ESA WorldCover.",
+  "metadata_payload": {
+    "credentials_required": false,
+    "cloud_optimized": true,
+    "dimensions": [36000, 36000],
+    "bands": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "dataset_id": "osm_india_pbf_latest",
+  "dataset_name": "OpenStreetMap India Complete Regional Extract",
+  "provider": "openstreetmap",
+  "official_source_url": "https://download.geofabrik.de/asia/india.html",
+  "download_url": "https://download.geofabrik.de/asia/india-latest.osm.pbf",
+  "product_name": "osm_india_pbf",
+  "product_version": "latest",
+  "acquisition_state": "source_discovered",
+  "acquisition_timestamp_utc": "2026-10-31T11:48:47.588436+00:00",
+  "source_publication_date": null,
+  "reference_period": null,
+  "geographic_coverage": "India-wide (national coverage across all States and UTs)",
+  "license": "ODbL-1.0",
+  "attribution": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0 (https://www.openstreetmap.org/copyright)",
+  "original_filename": "india-latest.osm.pbf",
+  "file_format": "osm.pbf",
+  "file_size_bytes": 1717986918,
+  "sha256": null,
+  "md5": null,
+  "crs": "EPSG:4326",
+  "spatial_resolution": "vector",
+  "temporal_resolution": null,
+  "coordinate_bounds": [
+    68.1,
+    6.5,
+    97.4,
+    35.5
+  ],
+  "nodata_value": null,
+  "processing_status": "raw",
+  "validation_status": "unvalidated",
+  "quality_notes": [
+    "Primary source for national roads, railways, hospitals, fire stations, waterways, and settlements.",
+    "Must be downloaded once and split into thematic layers to prevent redundant transfers."
+  ],
+  "operational_use_restrictions": "Governed by Open Database License (ODbL 1.0). Derivative databases must share-alike. Volunteered geographic information; density is high in urban centers and variable in rural forest tracts.",
+  "metadata_payload": {
+    "credentials_required": false
+  }
+}

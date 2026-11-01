@@ -1,0 +1,44 @@
+{
+  "dataset_id": "worldpop_pop_2020_india",
+  "dataset_name": "WorldPop India 1km Population Density Grid (2020)",
+  "provider": "worldpop",
+  "official_source_url": "https://hub.worldpop.org/geodata/summary?id=24785",
+  "download_url": "https://data.worldpop.org/GIS/Population_Density/Global_2000_2020_1km/2020/IND/ind_pd_2020_1km.tif",
+  "product_name": "worldpop_ind_pd_1km",
+  "product_version": "2020_v1",
+  "acquisition_state": "acquired",
+  "acquisition_timestamp_utc": "2026-10-31T12:28:26+00:00",
+  "source_publication_date": "2020-06-29",
+  "reference_period": "2020",
+  "geographic_coverage": "India-wide (national coverage, 1km grid)",
+  "license": "CC-BY-4.0",
+  "attribution": "WorldPop (School of Geography and Environmental Science, University of Southampton; Department of Geography and Geosciences, University of Louisville; Departement de Geographie, Universite de Namur) and Center for International Earth Science Information Network (CIESIN), Columbia University",
+  "original_filename": "ind_pd_2020_1km.tif",
+  "file_format": "geotiff",
+  "file_size_bytes": 18081300,
+  "sha256": "7854911bee96ec61cd56f8209cbc3992bcd13e2aeba7b9d852b76df390f393dc",
+  "md5": "c3af00c1bb6ba461da1acb7bcc9cc82a",
+  "crs": "EPSG:4326",
+  "spatial_resolution": "1km (30 arc-seconds)",
+  "temporal_resolution": "annual",
+  "coordinate_bounds": [
+    68.1,
+    6.5,
+    97.4,
+    35.5
+  ],
+  "nodata_value": -99999.0,
+  "processing_status": "raw",
+  "validation_status": "validated",
+  "quality_notes": [
+    "Residential population density per square kilometer derived from census data disaggregated via Random Forest machine learning models.",
+    "Provides continuous geographic exposure surface across all 28 states and 8 union territories."
+  ],
+  "operational_use_restrictions": "Open access under CC BY 4.0 with credit to WorldPop.",
+  "metadata_payload": {
+    "credentials_required": false,
+    "dimensions": [3508, 3451],
+    "bands": 1,
+    "pixel_type": "float32"
+  }
+}
